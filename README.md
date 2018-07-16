@@ -1,13 +1,15 @@
 Ebcdic2vdt
 ==========
 
-The `ebcdic2vdt` tools have been written to extract Videotex pages from 8"
+The `ebcdic2vdt` / `unitel2vdt` tools have been written to extract Videotex pages from 8"
 Unitel disc images.
 
 Requirements
 ------------
 
 These tools need a Linux environment with Bash and GCC.
+unitel2vdt only requires bash and no compilation.
+
 
 Compilation
 -----------
@@ -18,6 +20,22 @@ It is used by the `splitpages.bash` script.
 
 Usage
 -----
+
+### Directly converting Unitel disc image into videotex files
+
+    ./unitel2vdt.bash mydiskimage.img
+
+Each videotex page is saved into a separate file like:
+
+mydiskimage.img-003229.vdt
+mydiskimage.img-005377.vdt
+etc...
+
+This script takes care of:
+- converting EBCDIC
+- extract videotex pages from their possible fixed location on the disk
+- keep only non empty pages
+
 
 ### Converting a raw Unitel disc image to ASCII
 
