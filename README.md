@@ -32,7 +32,7 @@ mydiskimage.img-005377.vdt
 etc...
 
 This script takes care of:
-- converting EBVDIC
+- converting EBCDIC
 - extract videotex pages from their possible fixed location on the disk
 - keep only non empty pages
 
